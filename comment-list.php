@@ -28,8 +28,10 @@ $result= $conn -> query($sql);
         <table class="table table-bordered">
             <thead>
                 <tr>
+                    <th>id</th>
                     <th>name</th>
                     <th>comments</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
