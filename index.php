@@ -13,33 +13,62 @@
   <body>
       <div class="container">
           <form action="doCreate.php" class="mt-3" method="post">
-              <h2>即時匿名提問系統</h2>
-              <div class="mb-3">
-                  <label>提問主題(提問重點)</label>
-                  <input type="text" 
-                  name="titles"
-                  class="form-control"
-                  required
-                  >
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlTextarea1">
-                    請敘述您的問題
-                </label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comment"></textarea>
-              </div><br>
-              <button class="btn btn-info" type="submit">送出!</button>
+              <div class="outer">
+                <h2 class="d-flex justify-content-center">即時匿名提問系統</h2>
+
+                <div class="mb-3">
+                    <label>提問主題(提問重點)</label>
+                    <input type="text" 
+                    name="titles"
+                    class="form-control"
+                    required
+                    >
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1" >
+                      請敘述您的問題
+                  </label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comment"></textarea>
+                </div ><br>
+                <div class="button1">
+                  <button class="btn btn-info button" type="submit">送出</button>
+                </div>
+                
+                </div>
           </form>
       </div>
 
       <style>
+            .outer{
+              width: 100%;
+              height: 100%;
+              background-color: #F5F5F5;
+            }
+            .button1{
+              display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
             .button{
                 width: 150px;
                 height: 55px;
                 text-align: center;
                 cursor: crosshair;
+                background: #000;
+                color: #fff;
+                transition: all .3s linear;
 
             }
 
+            .button:hover{
+                background-color: #666;
+            }
+
+
 
       </style>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+</html>
