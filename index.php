@@ -33,6 +33,13 @@
       </div>
 
       <style>
+            .button{
+                width: 150px;
+                height: 55px;
+                text-align: center;
+                cursor: crosshair;
+
+            }
 
 
       </style>
