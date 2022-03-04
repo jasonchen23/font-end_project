@@ -33,7 +33,7 @@ $result = $conn->query($sql);
                     <th>id</th>
                     <th>name</th>
                     <th>comments</th>
-                    <th></th>
+                    <th>test</th>
                 </tr>
             </thead>
             <tbody>
