@@ -1,5 +1,5 @@
 <?php 
-if(!isset($_POST["titles"]) || ! isset($_POST["password"])){
+if(!isset($_POST["titles"]) || ! isset($_POST["comment"])){
     echo "請通過正常管道來到此頁 Error087: M T F !";
     exit;
 }
