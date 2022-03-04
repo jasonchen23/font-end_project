@@ -18,9 +18,10 @@
 
                 <div class="mb-3">
                     <label>提問主題(提問重點)</label>
-                    <input type="text" 
+                    <input type="text"
+                    placeholder="電腦系統更新問題" 
                     name="titles"
-                    class="form-control"
+                    class="form-control" 
                     required
                     >
                 </div>
@@ -28,7 +29,7 @@
                   <label for="exampleFormControlTextarea1" >
                       請敘述您的問題
                   </label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comment"></textarea>
+                  <textarea placeholder="如何將..." class="form-control" id="exampleFormControlTextarea1" rows="3" name="comment"></textarea>
                 </div ><br>
                 <div class="button1">
                   <button class="btn btn-info button" type="submit">送出</button>
@@ -43,6 +44,7 @@
               width: 100%;
               height: 100%;
               background-color: #F5F5F5;
+              
             }
             .button1{
               display: flex;
@@ -63,7 +65,28 @@
             .button:hover{
                 background-color: #666;
             }
+            textarea {
+          height: 150px;
+          line-height: 150%;
+          resize:vertical;
+        }
 
+        [type="submit"] {
+          
+          width: 100%;
+          background:#4e9cb4;
+          border-radius:5px;
+          border:0;
+          cursor:pointer;
+          color:white;
+          font-size:24px;
+          padding-top:10px;
+          padding-bottom:10px;
+          transition: all 0.3s;
+          margin-top:-4px;
+          font-weight:700;
+        }
+        [type="submit"]:hover { background:#CC4949; }
 
 
       </style>
