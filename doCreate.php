@@ -6,24 +6,10 @@ if(!isset($_POST["titles"]) || ! isset($_POST["password"])){
 require_once("db_connect.php");
 $titles =$_POST["titles"];
 $comment =$_POST["comment"];
-// $password =$_POST["password"];古早加密法:$password =md5($_POST["password"]);知道就好不建議使用
 
 
-
-// if(empty($account)){
-//     echo "請輸入帳號";
-//     // header("location: form.php");
-//     exit;
-// }
-// if(empty($password)){
-//     echo "請輸入密碼";
-//     // header("location: form.php");
-//     exit;
-// }
-// echo "account is  $account , password is $password.";
 date_default_timezone_set("Asia/Taipei"); 
 $now=date('Y-m-d H:i:s');
-// $sql="INSERT INTO users(name, create_time) VALUES('Tom', '$now')"
 
 $sql="INSERT INTO comments (titles, comment,  create_time, valid)
 VALUES ('$titles', '$comment' ,'$now',1)";
