@@ -18,54 +18,48 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 </head>
-
+<style>
+    .blue{
+    background-color: aqua;
+    width: 300px;
+    height: 500px;
+    }
+</style>
 <body>
     <div class="container">
         <!-- <div class="py-2">
             <a href="./create-user.php" class="btn btn-info">新增使用者</a>
         </div> -->
-        <?php
-        $data = $result->fetch_all(MYSQLI_ASSOC);
-        ?>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>name</th>
-                    <th>comments</th>
-                    <th>test</th>
-                </tr>
-            </thead>
-            <tbody>
+        <?php $data = $result->fetch_all(MYSQLI_ASSOC); ?>
+        <div class="row">
+            <div class="d-felx col-lg-4 col-md-6 blue"><h1>click on subjct</h1>
+                <hr>
                 <?php
-                // method 1
-                // if($result -> num_rows> 0):
-                //     while($row = $result-> fetch_assoc()):
-                // method 2
                 if ($result->num_rows > 0) :
                     foreach ($data as $row) :
                 ?>
-                        <tr>
-                            <td><?= $row["id"] ?></td>
-                            <td>Anonymous</td>
-                            <td><?= $row["comment"] ?></td>
-                            <td> <a href="doDelete.php?id=<?= $row["id"] ?>" class="btn btn-info"> Delete</a></td>
-                        </tr>
-                        <?php
-                        // method 1
-                        // endwhile; 
-                        ?>
-                    <?php
+                <div class="d-flex justify-content-center">
+                    <h3><a href=""><?=$row["titles"]?></a></h3>
+                </div>
+                <?php
                     // method 2
                     endforeach;
-                    ?>
+                ?>
                 <?php else : ?>
-                    <tr>
-                        <td>No Comment</td>
-                    </tr>
+                    <div class="d-flex justify-content-center">
+                        <p>No Comment</p>
+                    </div>
                 <?php endif; ?>
-            </tbody>
-        </table>
+            </div>
+            <div class="col-lg-8 col-md-6"><h1>---Details---</h1>
+                <hr>
+                <div class="py-2">
+                    <p>提問主題：</p>
+                    <p>敘述你的問題:</p>
+                    <a href="doDelete.php?id=<?= $row["id"] ?>" class="btn btn-info"> Delete</a>
+                </div>
+            </div>
+        </div>
 
     </div>
     <!-- Bootstrap JavaScript Libraries -->
