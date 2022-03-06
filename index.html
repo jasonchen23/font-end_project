@@ -57,7 +57,7 @@
       line-height: 20px;
       /* 行距 */
       background-color: transparent;
-      border: 2px solid #669ecc;
+      border: 2px solid #73aad6;
       transition: all 0.5s;
       padding: 13px;
       margin-bottom: 15px;
@@ -66,14 +66,14 @@
       outline: 0;
     }
     .feedback-input:focus {
-      border: 2px solid #f0b0b0ab;
+      border: 2px solid #9162628e;
     }
     #textarea {
       height: 200px;
     }
     .button {
       width: 100%;
-      background: #4e9cb4;
+      background: #4e9cb4f8;
       border-radius: 5px;
       border: 0;
       cursor: pointer;
@@ -87,7 +87,7 @@
     }
 
     [type="submit"]:hover {
-      background: linear-gradient(to bottom right, #FFD2D2, #F3F3FA, #F1E1FF);
+      background: linear-gradient(to bottom right, #ffd2d256, #f3f3fa36, #f1e1ff86);
       color: #000;
     }
     .darkmode-background {
