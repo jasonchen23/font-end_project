@@ -14,7 +14,8 @@
 </head>
 
 <body>
-  <div class="darkmode-background"></div>
+
+  <div id="bg" class="darkmode-background"></div>
   <div class="container">
     <form action="doCreate.php" class="mt-5" method="post">
       <div class="outer container">
@@ -42,15 +43,12 @@
     .outer {
       width: 75%;
       height: 100%;
-      background-color: #F5F5F5;
+      background-color: #ece6e6a8;
       margin:0px auto;
       border: 2px solid rgba(121, 120, 120, 0.1); 
       
 
     }
-
-
-
     .feedback-input {
       color: rgb(10, 7, 56);
       font-weight: 450;
@@ -67,14 +65,12 @@
       box-sizing: border-box;
       outline: 0;
     }
-
     .feedback-input:focus {
       border: 2px solid #f0b0b0ab;
     }
     #textarea {
       height: 200px;
     }
-
     .button {
       width: 100%;
       background: #4e9cb4;
@@ -94,9 +90,6 @@
       background: linear-gradient(to bottom right, #FFD2D2, #F3F3FA, #F1E1FF);
       color: #000;
     }
-
-
-
     .darkmode-background {
       background: #eee;
       position: fixed;
@@ -107,11 +100,9 @@
       top: 0;
       left: 0;
     }
-
     .button {
       isolation: isolate;
     }
-
     .darkmode--activated .logo {
       mix-blend-mode: difference;
     }
@@ -149,8 +140,54 @@
     window.addEventListener('load', addDarkmodeWidget);
     const background = document.createElement("div");
   </script>
-
-
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+  <script>
+      VANTA.BIRDS({
+          el: "#bg",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color1: 0x4e1f1f,
+          birdSize: 1.70,
+          quantity: 3.00
+      })
+  </script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script>
+  VANTA.NET({
+    el: "#bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 500.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x673737,
+    backgroundColor: 0xc1b7ab,
+    points: 8.00,
+    maxDistance: 26.00,
+    spacing: 20.00
+  })
+  </script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+<script>
+VANTA.CLOUDS({
+  el: "#bg",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00
+})
+</script> -->
 </body>
 
 </html>
